@@ -1,8 +1,8 @@
 package com.sus.tank.utils;
 
 /**
- * Created by hugeterry(http://hugeterry.cn)
- * Date: 17/2/1 15:40
+ * Created by sushuai
+ * Date: 17/7/12
  */
 
 import android.content.Context;

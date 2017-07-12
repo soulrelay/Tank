@@ -21,8 +21,8 @@ import java.util.ArrayList;
 import cn.hugeterry.coordinatortablayout.CoordinatorTabLayout;
 
 /**
- * Created by hugeterry(http://hugeterry.cn)
- * Date: 17/1/28 17:32
+ * Created by sushuai
+ * Date: 17/7/12
  */
 public class MainActivity extends AppCompatActivity {
     private CoordinatorTabLayout mCoordinatorTabLayout;
