@@ -29,9 +29,17 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
+
+    //Combination of TabLayout and CoordinatorLayout./TabLayout和CoordinatorLayout相结合的折叠控件
+    //https://github.com/hugeterry/CoordinatorTabLayout
     compile 'cn.hugeterry.coordinatortablayout:coordinatortablayout:1.0.6'
+
+    //图片加载库的封装
+    // https://github.com/soulrelay/ImageLoaderUtil
     compile 'com.sus.library:imagelib:1.0.0'
 
+    //swipe display drawer with flowing & bouncing effects.
+    //https://github.com/mxn21/FlowingDrawer
     compile 'com.mxn.soul:flowingdrawer-core:2.0.0'
     compile 'com.nineoldandroids:library:2.4.0'
 }
