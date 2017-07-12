@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_about:
-                IntentUtils.openUrl(this, "https://github.com/hugeterry/CoordinatorTabLayout");
+                IntentUtils.openUrl(this, "https://github.com/soulrelay/Tank");
                 break;
             case R.id.action_about_me:
-                IntentUtils.openUrl(this, "http://hugeterry.cn/about");
+                IntentUtils.openUrl(this, "https://github.com/soulrelay");
                 break;
         }
         return super.onOptionsItemSelected(item);
