@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Tank.iml" filepath="$PROJECT_DIR$/Tank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tank/tank.iml" filepath="$PROJECT_DIR$/tank/tank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tankcommon/tankcommon.iml" filepath="$PROJECT_DIR$/tankcommon/tankcommon.iml" />
+    </modules>
+  </component>
+</project>
