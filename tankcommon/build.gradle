@@ -34,7 +34,7 @@ dependencies {
     //https://github.com/hugeterry/CoordinatorTabLayout
     compile 'cn.hugeterry.coordinatortablayout:coordinatortablayout:1.0.6'
 
-    //图片加载库的封装
+    //图片加载库的封装 自己基于Glide进行的封装
     // https://github.com/soulrelay/ImageLoaderUtil
     compile 'com.sus.library:imagelib:1.0.0'
 
