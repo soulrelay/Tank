@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_about"
-        android:title="关于该控件"
+        android:title="关于该项目"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_about_me"
