@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private CoordinatorTabLayout mCoordinatorTabLayout;
     private int[] mImageArray, mColorArray;
     private ArrayList<Fragment> mFragments;
-    private final String[] mTitles = {"Android", "iOS", "前端", "拓展资源"};
+    private final String[] mTitles = {"1", "2", "3", "4"};
     private ViewPager mViewPager;
     private FlowingDrawer mDrawer;
 
@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         initFragments();
         initViewPager();
         mImageArray = new int[]{
-                R.mipmap.bg_android,
-                R.mipmap.bg_ios,
-                R.mipmap.bg_js,
-                R.mipmap.bg_other};
+                R.drawable.header_bg1,
+                R.drawable.header_bg2,
+                R.drawable.header_bg3,
+                R.drawable.header_bg4};
         mColorArray = new int[]{
                 android.R.color.holo_blue_light,
                 android.R.color.holo_red_light,
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 android.R.color.holo_green_light};
 
         mCoordinatorTabLayout = (CoordinatorTabLayout) findViewById(R.id.coordinatortablayout);
-        mCoordinatorTabLayout.setTitle("Demo")
+        mCoordinatorTabLayout.setTitle("Tank")
                 .setBackEnable(true)
                 .setImageArray(mImageArray, mColorArray)
                 .setupWithViewPager(mViewPager);
