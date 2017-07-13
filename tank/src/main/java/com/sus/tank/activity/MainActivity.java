@@ -14,6 +14,7 @@ import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.sus.tank.fragment.MainFragment;
 import com.sus.tank.adapter.MyPagerAdapter;
 import com.sus.tank.R;
+import com.sus.tank.fragment.VipFragment;
 import com.sus.tank.utils.IntentUtils;
 
 import java.util.ArrayList;
@@ -68,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
     private void initFragments() {
         mFragments = new ArrayList<>();
         for (String title : mTitles) {
-            mFragments.add(MainFragment.getInstance(title));
+            //mFragments.add(MainFragment.getInstance(title));
+            mFragments.add(VipFragment.getInstance());
         }
     }
 
