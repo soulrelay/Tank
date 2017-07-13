@@ -25,15 +25,11 @@ final class CompRegister {
 
     private static void registerAll() {
         registerCommon(ComponentFactory.get());
-        registerOverseas(ComponentFactory.get());
     }
 
     private static void registerCommon(ComponentFactory factory) {
-        factory.registerCommon(Components.Types.TYPE1, Components.Names.NAME1, TipsComponent.class);
+        factory.registerCommon(Components.Types.TIPS, Components.Names.TIPS_COMMON, TipsComponent.class);
 
 
-    }
-
-    private static void registerOverseas(ComponentFactory factory) {
     }
 }

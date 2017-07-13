@@ -6,14 +6,12 @@ package com.sus.tankcommon.component;
 public class Components {
 
     public static final class Names {
-        public static final String NAME1 = "name1";
-        public static final String NAME2 = "name2";
+        public static final String TIPS_COMMON = "tips_common";
 
     }
 
     public static final class Types {
-        public static final String TYPE1 = "type1";
-        public static final String TYPE2 = "type2";
+        public static final String TIPS = "tips";
 
     }
 

@@ -136,9 +136,9 @@ public class ComponentConfig {
                 return null;
             }
             switch (comType) {
-                case BANNER: {
-                    type = Components.Types.TYPE1;
-                    name = Components.Names.NAME1;
+                case TIPS: {
+                    type = Components.Types.TIPS;
+                    name = Components.Names.TIPS_COMMON;
                     break;
                 }
                 default: {
@@ -152,7 +152,7 @@ public class ComponentConfig {
     }
 
     private enum TYPE {
-        BANNER(3);
+        TIPS(3);
 
         TYPE (int type) {
             value = type;

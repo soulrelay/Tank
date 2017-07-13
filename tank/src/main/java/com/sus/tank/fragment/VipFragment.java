@@ -17,7 +17,7 @@ import com.sus.tankcommon.warehouse.tips.AbsTipsComponent;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static com.sus.tankcommon.component.Components.PageIds.PAGE_NONE;
-import static com.sus.tankcommon.component.Components.Types.TYPE1;
+import static com.sus.tankcommon.component.Components.Types.TIPS;
 
 
 /**
@@ -60,7 +60,7 @@ public class VipFragment extends AbsNormalFragment {
 
         mContentContainer = (LinearLayout) mRootView.findViewById(R.id.oc_vip_content_root);
 
-        addVipCardComponent();
+        addTipsComponent();
 
         return mRootView;
     }
@@ -79,20 +79,20 @@ public class VipFragment extends AbsNormalFragment {
     }
 
     /**
-     * 添加会员卡片组件
+     * 添加只有一行文字的提示组件
      */
-    private void addVipCardComponent() {
-        AbsTipsComponent vipCardComponent = newComponent(TYPE1, PAGE_NONE);
-        if (vipCardComponent == null) {
+    private void addTipsComponent() {
+        AbsTipsComponent tipsComponent = newComponent(TIPS, PAGE_NONE);
+        if (tipsComponent == null) {
             return;
         }
-        initComponent(vipCardComponent, TYPE1, mContentContainer, PAGE_NONE);
-        IView iView = vipCardComponent.getView();
+        initComponent(tipsComponent, TIPS, mContentContainer, PAGE_NONE);
+        IView iView = tipsComponent.getView();
         View operationView = iView != null ? iView.getView() : null;
         if (operationView == null) {
             return;
         }
-        absTipsComponent = vipCardComponent;
+        absTipsComponent = tipsComponent;
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
         mContentContainer.addView(operationView, layoutParams);
         mTopPresenter.addChild(absTipsComponent.getPresenter());
