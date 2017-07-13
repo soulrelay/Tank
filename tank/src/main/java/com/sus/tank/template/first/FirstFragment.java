@@ -21,9 +21,9 @@ import static com.sus.tankcommon.component.Components.Types.TIPS;
 
 
 /**
- * Created by xingjingmin on 2017/4/13.
+ * Created by sushuai
+ * Date: 17/7/13
  */
-
 public class FirstFragment extends AbsNormalFragment {
 
     private FirstPresenter mTopPresenter;
@@ -35,9 +35,6 @@ public class FirstFragment extends AbsNormalFragment {
 
     public static FirstFragment getInstance() {
         FirstFragment fra = new FirstFragment();
-//        Bundle bundle = new Bundle();
-//        bundle.putString(ARG_TITLE, title);
-//        fra.setArguments(bundle);
         return fra;
     }
 
@@ -45,11 +42,6 @@ public class FirstFragment extends AbsNormalFragment {
     protected PresenterGroup onCreateTopPresenter() {
         mTopPresenter = new FirstPresenter(getContext(), getArguments());
         return mTopPresenter;
-    }
-
-    @Override
-    protected void onSIDPopulated(String sid) {
-
     }
 
     @Nullable
@@ -69,13 +61,6 @@ public class FirstFragment extends AbsNormalFragment {
     public void onDestroyViewImpl() {
         super.onDestroyViewImpl();
         mTopPresenter = null;
-    }
-
-    @Override
-    public void setTitle(String title) {
-//        if (!isDestroyed()) {
-//            mTitleBar.setTitle(title);
-//        }
     }
 
     /**

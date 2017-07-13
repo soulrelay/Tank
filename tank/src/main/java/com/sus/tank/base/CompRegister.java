@@ -9,7 +9,6 @@ import com.sus.tankcommon.component.Components;
 
 /**
  * 用于注册所有的组件
- * Created by yuhenghui on 16/12/20.
  */
 @Keep
 final class CompRegister {

@@ -22,14 +22,9 @@ import android.view.animation.Animation;
  */
 abstract class BaseFragment extends Fragment implements IGroupView, KeyEvent.Callback {
 
-    private Context mBussinessContext;
     private IPageSwitcher mPageSwitcher;
     private PresenterGroup mTopPresenter;
-//    private ToastHandler mToastHandler;
-//    private DialogHandler mDialogHandler;
     private View mRootView;
-
-    private String mCurrentSID;
 
     private boolean mDestroyed = false;
 
@@ -130,12 +125,6 @@ abstract class BaseFragment extends Fragment implements IGroupView, KeyEvent.Cal
 //            onSIDPopulated(mCurrentSID);
 //        }
 //    }
-
-    protected abstract void onSIDPopulated(String sid);
-
-    protected String currentSID() {
-        return mCurrentSID;
-    }
 
     @Nullable
     protected View onCreateViewImpl(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
