@@ -12,7 +12,7 @@ import com.sus.tank.R;
 import com.sus.tankcommon.base.AbsNormalFragment;
 import com.sus.tankcommon.base.IView;
 import com.sus.tankcommon.base.PresenterGroup;
-import com.sus.tankcommon.warehouse.formtips.AbsFormHypeTextComponent;
+import com.sus.tankcommon.warehouse.tips.AbsTipsComponent;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -31,7 +31,7 @@ public class VipFragment extends AbsNormalFragment {
     private RelativeLayout mRootView;
     private LinearLayout mContentContainer;
 
-    private AbsFormHypeTextComponent absFormHypeTextComponent;
+    private AbsTipsComponent absTipsComponent;
 
     public static VipFragment getInstance() {
         VipFragment fra = new VipFragment();
@@ -82,7 +82,7 @@ public class VipFragment extends AbsNormalFragment {
      * 添加会员卡片组件
      */
     private void addVipCardComponent() {
-        AbsFormHypeTextComponent vipCardComponent = newComponent(TYPE1, PAGE_NONE);
+        AbsTipsComponent vipCardComponent = newComponent(TYPE1, PAGE_NONE);
         if (vipCardComponent == null) {
             return;
         }
@@ -92,9 +92,9 @@ public class VipFragment extends AbsNormalFragment {
         if (operationView == null) {
             return;
         }
-        absFormHypeTextComponent = vipCardComponent;
+        absTipsComponent = vipCardComponent;
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
         mContentContainer.addView(operationView, layoutParams);
-        mTopPresenter.addChild(absFormHypeTextComponent.getPresenter());
+        mTopPresenter.addChild(absTipsComponent.getPresenter());
     }
 }

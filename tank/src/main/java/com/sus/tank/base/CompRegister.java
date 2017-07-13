@@ -2,7 +2,7 @@ package com.sus.tank.base;
 
 import android.support.annotation.Keep;
 
-import com.sus.tank.warehouse.FormHypeTextComponent;
+import com.sus.tank.warehouse.TipsComponent;
 import com.sus.tankcommon.component.ComponentFactory;
 import com.sus.tankcommon.component.Components;
 
@@ -29,7 +29,7 @@ final class CompRegister {
     }
 
     private static void registerCommon(ComponentFactory factory) {
-        factory.registerCommon(Components.Types.TYPE1, Components.Names.NAME1, FormHypeTextComponent.class);
+        factory.registerCommon(Components.Types.TYPE1, Components.Names.NAME1, TipsComponent.class);
 
 
     }

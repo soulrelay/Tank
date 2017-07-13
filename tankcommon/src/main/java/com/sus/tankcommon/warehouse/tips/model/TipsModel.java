@@ -1,7 +1,7 @@
-package com.sus.tankcommon.warehouse.formtips.model;
+package com.sus.tankcommon.warehouse.tips.model;
 
 
-public class SimpleHypeTextModel implements IHypeTextModel {
+public class TipsModel implements ITipsModel {
 
     public String text;
 

@@ -1,4 +1,4 @@
-package com.sus.tankcommon.warehouse.formtips.view;
+package com.sus.tankcommon.warehouse.tips.view;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -18,16 +18,16 @@ import com.sus.tankcommon.R;
  * @since 2017/3/27
  */
 
-public class FormHypeTextImpl extends LinearLayout implements IFormHypeText {
+public class TipsView extends LinearLayout implements ITipsView {
 
     private LinearLayout group_formtips;
 
-    public FormHypeTextImpl(Context context) {
+    public TipsView(Context context) {
         super(context);
         init();
     }
 
-    public FormHypeTextImpl(Context context, @Nullable AttributeSet attrs) {
+    public TipsView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
