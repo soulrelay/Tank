@@ -14,7 +14,7 @@ import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.sus.tank.adapter.MyPagerAdapter;
 import com.sus.tank.R;
 import com.sus.tank.template.first.FirstFragment;
-import com.sus.tank.utils.IntentUtils;
+import com.sus.tankcommon.utils.IntentUtils;
 
 import java.util.ArrayList;
 

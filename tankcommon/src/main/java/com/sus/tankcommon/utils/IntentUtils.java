@@ -1,4 +1,4 @@
-package com.sus.tank.utils;
+package com.sus.tankcommon.utils;
 
 /**
  * Created by sushuai
