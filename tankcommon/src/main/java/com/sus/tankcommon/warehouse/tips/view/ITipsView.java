@@ -5,10 +5,8 @@ import com.sus.tankcommon.base.IView;
 import com.sus.tankcommon.warehouse.tips.model.ITipsModel;
 
 /**
- * 接送机表单最底下的提示文案
- *
- * @author kechanghe
- * @since 2017/3/27
+ * Created by sushuai
+ * Date: 17/7/13
  */
 
 public interface ITipsView<T extends ITipsModel> extends IView {

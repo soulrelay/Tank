@@ -4,7 +4,8 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 /**
- * Created by didi on 16/8/25.
+ * Created by sushuai
+ * Date: 17/7/12
  */
 public class GenericHelper {
 

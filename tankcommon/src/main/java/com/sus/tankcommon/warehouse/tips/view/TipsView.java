@@ -12,10 +12,8 @@ import com.sus.tankcommon.R;
 
 
 /**
- * 接送机表单最底下的提示文案
- *
- * @author kechanghe
- * @since 2017/3/27
+ * Created by sushuai
+ * Date: 17/7/13
  */
 
 public class TipsView extends LinearLayout implements ITipsView {

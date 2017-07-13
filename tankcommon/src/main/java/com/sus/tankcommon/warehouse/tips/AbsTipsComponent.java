@@ -10,10 +10,8 @@ import com.sus.tankcommon.warehouse.tips.view.ITipsView;
 
 
 /**
- * 接送机表单最底下的提示文案
- *
- * @author kechanghe
- * @since 2017/3/27
+ * Created by sushuai
+ * Date: 17/7/13
  */
 
 public abstract class AbsTipsComponent extends BaseComponent<ITipsView, AbsTipsPresenter> {
