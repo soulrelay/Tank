@@ -1,4 +1,4 @@
-package com.sus.tank.fragment;
+package com.sus.tank.template.first;
 
 
 import com.sus.tankcommon.base.IGroupView;
@@ -7,5 +7,5 @@ import com.sus.tankcommon.base.IGroupView;
  * Created by xingjingmin on 2017/4/13.
  */
 
-public interface IVipView extends IGroupView {
+public interface IFirstView extends IGroupView {
 }

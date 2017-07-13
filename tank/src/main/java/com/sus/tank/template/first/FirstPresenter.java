@@ -1,27 +1,24 @@
-package com.sus.tank.fragment;
+package com.sus.tank.template.first;
 
 import android.content.Context;
 import android.os.Bundle;
 
-
 import com.sus.tankcommon.base.PresenterGroup;
-
-import java.util.HashMap;
 
 
 /**
  * Created by xingjingmin on 2017/4/13.
  */
 
-public class VipPresenter extends PresenterGroup<IVipView> {
+public class FirstPresenter extends PresenterGroup<IFirstView> {
 
     public static final String KEY_FROM_PAGE = "KEY_FROM_PAGE";
-    public static final String VALUE_FROM_PAGE = "VipPresenter";
+    public static final String VALUE_FROM_PAGE = "FirstPresenter";
 
 //    private VipCardModel cardData;
 //    private int channelId;
 
-    public VipPresenter(Context context, Bundle arguments) {
+    public FirstPresenter(Context context, Bundle arguments) {
         super(context, arguments);
     }
 

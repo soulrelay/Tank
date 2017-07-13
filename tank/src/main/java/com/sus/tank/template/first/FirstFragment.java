@@ -1,4 +1,4 @@
-package com.sus.tank.fragment;
+package com.sus.tank.template.first;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,17 +24,17 @@ import static com.sus.tankcommon.component.Components.Types.TIPS;
  * Created by xingjingmin on 2017/4/13.
  */
 
-public class VipFragment extends AbsNormalFragment {
+public class FirstFragment extends AbsNormalFragment {
 
-    private VipPresenter mTopPresenter;
+    private FirstPresenter mTopPresenter;
 
     private RelativeLayout mRootView;
     private LinearLayout mContentContainer;
 
     private AbsTipsComponent absTipsComponent;
 
-    public static VipFragment getInstance() {
-        VipFragment fra = new VipFragment();
+    public static FirstFragment getInstance() {
+        FirstFragment fra = new FirstFragment();
 //        Bundle bundle = new Bundle();
 //        bundle.putString(ARG_TITLE, title);
 //        fra.setArguments(bundle);
@@ -43,7 +43,7 @@ public class VipFragment extends AbsNormalFragment {
 
     @Override
     protected PresenterGroup onCreateTopPresenter() {
-        mTopPresenter = new VipPresenter(getContext(), getArguments());
+        mTopPresenter = new FirstPresenter(getContext(), getArguments());
         return mTopPresenter;
     }
 

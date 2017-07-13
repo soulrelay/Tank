@@ -15,11 +15,6 @@ public abstract class AbsNormalFragment extends BaseFragment {
         ComponentLoader.load();
     }
 
-//    @Override
-//    protected void onSIDPopulated(String sid) {
-//        GlobalContext.setBusinessId(sid);
-//    }
-
     /**
      * 创建一个组件
      *
