@@ -12,7 +12,6 @@ import java.util.Map;
 
 /**
  * 组件工厂
- * Created by yuhenghui on 16/12/21.
  */
 public class ComponentFactory {
 
@@ -59,12 +58,6 @@ public class ComponentFactory {
      * @return 组件对象
      */
     public final <T extends IComponent> T newComponent(Context ctx, String type, int pageId) {
-//        /** 如果服务器没有配置组件,直接创建默认的组件*/
-//        ComponentConfig cfg = configuredComponent(ctx, sid, type, pageId);
-//        /** 如果配置为关闭,直接返回null*/
-//        if (cfg != null && !cfg.open()) {
-//            return null;
-//        }
         /** 如果配置了组件名称,先尝试从外部加载*/
         String cmpName = mCommons.get(type);
         T component = null;
@@ -119,69 +112,6 @@ public class ComponentFactory {
         }
         return null;
     }
-
-
-    //    /**
-//     * 根据业务线和页面ID创建插件内部提供的组件
-//     *
-//     * @param sid    业务线ID
-//     * @param pageId 页面ID
-//     * @return 通过动态加载创建的组件
-//     */
-    @SuppressWarnings("unchecked")
-//    private <T extends IComponent> T newPluginComponent(Context ctx, String sid, String type, String cmpName, int pageId) {
-//        if (TextUtils.equals(sid, SidConverter.SID_SOFA) || TextUtils.equals(sid, SidConverter.SID_OFO)) {
-//            IPluginEntrance entrance = PluginManager.get(ctx).queryPluginEntrance(sid);
-//            if (entrance == null) {
-//                return null;
-//            }
-//
-//            try {
-//                return (T) entrance.newComponent(type, cmpName, sid, pageId);
-//            } catch (ClassCastException e) {
-//                if (DEBUG) {
-//                    Log.e(TAG, "组件类型转化异常", e);
-//                }
-//            } catch (Throwable e) {
-//                if (DEBUG) {
-//                    Log.e(TAG, "创建组件异常", e);
-//                }
-//            }
-//        }
-//
-//        return null;
-//    }
-
-
-    /**
-     * 查询组件的配置信息
-     *
-     * @param sid    业务线ID
-     * @param type   组件类型
-     * @param pageId 页面ID
-     * @return 组件的配置信息
-     */
-//    private ComponentConfig configuredComponent(Context ctx, String sid, String type, int pageId) {
-//        ComponentConfig config = ComponentsConfig.get(ctx).queryConfig(type, sid, pageId);
-//        if (config != null && config.valid() && TextUtils.equals(type, config.type())) {
-//            return config;
-//        } else {
-//            return null;
-//        }
-//    }
-
-    /**
-     * 获取新业务线衍生于业务线的sid
-     *
-     * @return
-     */
-//    public String getParentSid(Context ctx, String sid) {
-//        return ComponentsConfig.get(ctx).subsid2sid(sid);
-//    }
-//
-//    public int sid2Bid(Context ctx, String subSid) {
-//        return ComponentsConfig.get(ctx).subsid2bid(subSid);
-//    }
 
     public static ComponentFactory get() {
         return Holder.INSTANCE;

@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * Created by yuhenghui on 16/12/29.
+ * 组件全局加载器
  */
 public  class ComponentLoader {
 

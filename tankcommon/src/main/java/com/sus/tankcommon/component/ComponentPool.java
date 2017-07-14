@@ -10,7 +10,6 @@ import java.util.Map;
 
 /**
  * 组件池,所有的组件根据类别和名称注册到这里
- * Created by yuhenghui on 16/12/20.
  */
 class ComponentPool {
 

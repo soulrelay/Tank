@@ -1,7 +1,7 @@
 package com.sus.tankcommon.component;
 
 /**
- * Created by yuhenghui on 16/12/21.
+ * 组件管理集合
  */
 public class Components {
 

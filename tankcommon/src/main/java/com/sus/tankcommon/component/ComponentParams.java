@@ -2,7 +2,9 @@ package com.sus.tankcommon.component;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 
 import java.lang.ref.WeakReference;
 
@@ -15,6 +17,8 @@ public class ComponentParams {
     private WeakReference<Activity> activity;
     private WeakReference<Fragment> fragment;
     public int pageID;
+    public String type;
+    public final Bundle extras = new Bundle();
 
     /**
      * 通过参数构建一个组件初始化参数
@@ -89,6 +93,13 @@ public class ComponentParams {
      */
     public ComponentParams add(int pageID) {
         this.pageID = pageID;
+        return this;
+    }
+
+    public ComponentParams addConfigParams(String type) {
+        if (!TextUtils.isEmpty(type)) {
+            this.type = type;
+        }
         return this;
     }
 }

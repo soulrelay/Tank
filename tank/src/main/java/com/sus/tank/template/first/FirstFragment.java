@@ -79,6 +79,7 @@ public class FirstFragment extends AbsNormalFragment {
         }
         absTipsComponent = tipsComponent;
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT);
+        layoutParams.topMargin = 20;
         mContentContainer.addView(operationView, layoutParams);
         mTopPresenter.addChild(absTipsComponent.getPresenter());
     }

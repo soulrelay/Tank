@@ -18,7 +18,7 @@ public class TipsPresenter extends AbsTipsPresenter {
     @Override
     protected void onAdd(Bundle arguments) {
         super.onAdd(arguments);
-        mView.setData("11111111111test");
+        mView.setData("我是组件1");
     }
 
 

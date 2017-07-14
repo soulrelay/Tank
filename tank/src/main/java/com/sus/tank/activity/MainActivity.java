@@ -13,6 +13,7 @@ import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.sus.tank.adapter.MyPagerAdapter;
 import com.sus.tank.R;
+import com.sus.tank.fragment.MainFragment;
 import com.sus.tank.template.first.FirstFragment;
 import com.sus.tankcommon.utils.IntentUtils;
 
@@ -68,8 +69,11 @@ public class MainActivity extends AppCompatActivity {
     private void initFragments() {
         mFragments = new ArrayList<>();
         for (String title : mTitles) {
-            //mFragments.add(MainFragment.getInstance(title));
-            mFragments.add(FirstFragment.getInstance());
+            if(title.equals("1")) {
+                mFragments.add(FirstFragment.getInstance());
+            }else{
+                mFragments.add(MainFragment.getInstance(title));
+            }
         }
     }
 
