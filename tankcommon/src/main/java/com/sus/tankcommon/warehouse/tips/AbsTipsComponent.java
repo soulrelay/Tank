@@ -3,7 +3,7 @@ package com.sus.tankcommon.warehouse.tips;
 import android.view.ViewGroup;
 
 import com.sus.tankcommon.base.BaseComponent;
-import com.sus.tankcommon.base.ComponentParams;
+import com.sus.tankcommon.component.ComponentParams;
 import com.sus.tankcommon.warehouse.tips.presenter.AbsTipsPresenter;
 import com.sus.tankcommon.warehouse.tips.view.TipsView;
 import com.sus.tankcommon.warehouse.tips.view.ITipsView;

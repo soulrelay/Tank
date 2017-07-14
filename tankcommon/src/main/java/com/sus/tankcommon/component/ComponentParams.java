@@ -1,4 +1,4 @@
-package com.sus.tankcommon.base;
+package com.sus.tankcommon.component;
 
 import android.app.Activity;
 import android.content.Context;

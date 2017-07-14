@@ -3,13 +3,13 @@ package com.sus.tankcommon.base;
 import android.support.annotation.Keep;
 import android.view.ViewGroup;
 
+import com.sus.tankcommon.component.ComponentParams;
+
 /**
  * 组件统一接口
  * 这是抽象工厂的接口
  * 每个具体的组件会有自己的一个IComponent实现
  * 每个具体的实现能够生产一个IView和一个IPresenter组成的产品族
- * <p/>
- * Created by yuhenghui on 16/8/22.
  */
 @Keep
 public interface IComponent<V extends IView, P extends IPresenter> {

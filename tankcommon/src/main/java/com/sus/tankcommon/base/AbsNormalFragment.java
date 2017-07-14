@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 
 import com.sus.tankcommon.component.ComponentFactory;
 import com.sus.tankcommon.component.ComponentLoader;
+import com.sus.tankcommon.component.ComponentParams;
 
 /**
  * Created by yuhenghui on 16/12/20.

@@ -2,6 +2,8 @@ package com.sus.tankcommon.base;
 
 import android.view.ViewGroup;
 
+import com.sus.tankcommon.component.ComponentParams;
+
 /**
  * 适用于简单场景下的 Component 基类。</p>
  *
