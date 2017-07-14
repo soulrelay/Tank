@@ -2,24 +2,19 @@ package com.sus.tankcommon.base;
 
 import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 
 import java.lang.ref.WeakReference;
 
 /**
  * 组件初始化参数
  * 以对象的形式提供,保证组件接口参数可以保持不变
- * <p/>
- * Created by yuhenghui on 16/12/20.
  */
 public class ComponentParams {
     public Context bizCtx;
     private WeakReference<Activity> activity;
     private WeakReference<Fragment> fragment;
     public int pageID;
-    public final Bundle extras = new Bundle();
 
     /**
      * 通过参数构建一个组件初始化参数
@@ -94,18 +89,6 @@ public class ComponentParams {
      */
     public ComponentParams add(int pageID) {
         this.pageID = pageID;
-        return this;
-    }
-
-    /**
-     * 查询配置信息,并将配置的入口参数加入到bundle中
-     *
-     * @return
-     */
-    public ComponentParams addConfigParams(String type) {
-        if (!TextUtils.isEmpty(type)) {
-
-        }
         return this;
     }
 }
