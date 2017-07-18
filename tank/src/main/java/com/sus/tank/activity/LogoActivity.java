@@ -28,6 +28,7 @@ public class LogoActivity extends AppCompatActivity {
             public void onLauncherViewFinish() {
                 Intent intent=new Intent(LogoActivity.this,MainActivity.class);
                 startActivity(intent);
+                LogoActivity.this.finish();
             }
         });
     }
