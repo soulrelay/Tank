@@ -19,6 +19,7 @@ import java.util.Random;
 
 /**
  * Created by Jcs on 2017/7/10.
+ * from：http://www.jianshu.com/p/3dd3d1524851
  */
 
 public class FishDrawable extends Drawable {

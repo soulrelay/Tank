@@ -26,6 +26,7 @@ import java.util.Random;
 /**
  * author：Jics
  * 2017/7/12 15:25
+ * from：http://www.jianshu.com/p/54f78c38a0f0
  */
 public class FishDrawableView extends RelativeLayout {
 
