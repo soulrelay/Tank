@@ -2,8 +2,10 @@ package com.sus.tank.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -11,9 +13,10 @@ import android.view.WindowManager;
 
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
-import com.sus.tank.adapter.MyPagerAdapter;
 import com.sus.tank.R;
+import com.sus.tank.adapter.MyPagerAdapter;
 import com.sus.tank.fragment.MainFragment;
+import com.sus.tank.fragment.MenuListFragment;
 import com.sus.tank.template.first.FirstFragment;
 import com.sus.tankcommon.utils.IntentUtils;
 
@@ -64,14 +67,38 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
+        setupMenu();
+    }
+
+    private void setupMenu() {
+        FragmentManager fm = getSupportFragmentManager();
+        MenuListFragment mMenuFragment = (MenuListFragment) fm.findFragmentById(R.id.id_container_menu);
+        if (mMenuFragment == null) {
+            mMenuFragment = new MenuListFragment();
+            fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment).commit();
+        }
+
+        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
+            @Override
+            public void onDrawerStateChange(int oldState, int newState) {
+                if (newState == ElasticDrawer.STATE_CLOSED) {
+                    Log.i("MainActivity", "Drawer STATE_CLOSED");
+                }
+            }
+
+            @Override
+            public void onDrawerSlide(float openRatio, int offsetPixels) {
+                Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
+            }
+        });
     }
 
     private void initFragments() {
         mFragments = new ArrayList<>();
         for (String title : mTitles) {
-            if(title.equals("1")) {
+            if (title.equals("1")) {
                 mFragments.add(FirstFragment.getInstance());
-            }else{
+            } else {
                 mFragments.add(MainFragment.getInstance(title));
             }
         }
