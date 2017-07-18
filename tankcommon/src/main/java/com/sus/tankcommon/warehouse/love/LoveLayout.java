@@ -21,7 +21,7 @@ import java.util.Random;
  * Created by MMF on 2016/9/18.
  */
 public class LoveLayout extends RelativeLayout {
-    Drawable[] drawable = new Drawable[3];
+    Drawable[] drawable = new Drawable[4];
     private Random random = new Random();
     private int dHeight;
     private int dWidth;
@@ -45,9 +45,10 @@ public class LoveLayout extends RelativeLayout {
 
 
     private void init() {
-        drawable[0] = getResources().getDrawable(R.drawable.icon_1);
-        drawable[1] = getResources().getDrawable(R.drawable.icon_2);
-        drawable[2] = getResources().getDrawable(R.drawable.icon_3);
+        drawable[0] = getResources().getDrawable(R.drawable.bubbles1);
+        drawable[1] = getResources().getDrawable(R.drawable.bubbles2);
+        drawable[2] = getResources().getDrawable(R.drawable.bubbles3);
+        drawable[3] = getResources().getDrawable(R.drawable.bubbles4);
 
         dHeight = CommonUtils.dp2px(getContext(), 30);
         dWidth = CommonUtils.dp2px(getContext(), 30);
@@ -63,7 +64,11 @@ public class LoveLayout extends RelativeLayout {
 
     public void addLove() {
         final ImageView iv = new ImageView(getContext());
-        iv.setImageDrawable(drawable[random.nextInt(3)]);
+        iv.setImageDrawable(drawable[random.nextInt(4)]);
+        int hw = 10 + random.nextInt(30);
+        dHeight = CommonUtils.dp2px(getContext(), hw);
+        dWidth = CommonUtils.dp2px(getContext(), hw);
+        params = new LayoutParams(dWidth, dHeight);
         //显示在容器底部居中
         params.addRule(CENTER_HORIZONTAL);
         params.addRule(ALIGN_PARENT_BOTTOM);
@@ -83,10 +88,10 @@ public class LoveLayout extends RelativeLayout {
 
     private AnimatorSet getAnimator(ImageView iv) {
         //缩放
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(iv, "scaleX", 0.4f, 1f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(iv, "scaleY", 0.4f, 1f);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(iv, "scaleX", 0.2f, 1f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(iv, "scaleY", 0.2f, 1f);
         //透明度
-        ObjectAnimator alpha = ObjectAnimator.ofFloat(iv, "alpha", 0.4f, 1f);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(iv, "alpha", 0.2f, 1f);
         AnimatorSet enterSet = new AnimatorSet();
         enterSet.setDuration(500);
         enterSet.playTogether(scaleX, scaleY, alpha);

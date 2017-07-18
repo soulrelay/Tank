@@ -47,7 +47,7 @@ public class MenuListFragment extends Fragment {
     }
 
     private CountDownTimer createTimer() {
-        return new CountDownTimer(Integer.MAX_VALUE, 800) {
+        return new CountDownTimer(Integer.MAX_VALUE, 500) {
 
             @Override
             public void onTick(long l) {
