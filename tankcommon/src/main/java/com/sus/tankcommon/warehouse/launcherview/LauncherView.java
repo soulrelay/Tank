@@ -21,8 +21,6 @@ import com.sus.tankcommon.R;
 import com.sus.tankcommon.utils.CommonUtils;
 import com.sus.tankcommon.warehouse.wave.Wave;
 
-import static cn.hugeterry.coordinatortablayout.R.attr.logo;
-
 /**
  * Author:    Diamond_Lin
  * Version    V1.0
@@ -248,26 +246,32 @@ public class LauncherView extends RelativeLayout {
         View view = View.inflate(getContext(), R.layout.widget_load_view, this);
         //View logo = view.findViewById(R.id.iv_logo);
         Wave wave = (Wave) view.findViewById(R.id.wave);
-        final View slogo = view.findViewById(R.id.iv_slogo);
+        //final View slogo = view.findViewById(R.id.iv_slogo);
         ObjectAnimator alpha = ObjectAnimator.ofFloat(wave, View.ALPHA, 0f, 1f);
         alpha.setDuration(1000);
 
         alpha.start();
-        new Handler().postDelayed(new Runnable() {
+        alpha.addListener(new AnimatorListenerAdapter() {
             @Override
-            public void run() {
-                ObjectAnimator alpha = ObjectAnimator.ofFloat(slogo, View.ALPHA, 0f, 1f);
-                alpha.setDuration(200);
-                alpha.start();
-                alpha.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        listener.onLauncherViewFinish();
-                    }
-                });
+            public void onAnimationEnd(Animator animation) {
+                listener.onLauncherViewFinish();
             }
-        }, 1000);
+        });
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                ObjectAnimator alpha = ObjectAnimator.ofFloat(slogo, View.ALPHA, 0f, 1f);
+//                alpha.setDuration(200);
+//                alpha.start();
+//                alpha.addListener(new AnimatorListenerAdapter() {
+//                    @Override
+//                    public void onAnimationEnd(Animator animation) {
+//                        super.onAnimationEnd(animation);
+//                        listener.onLauncherViewFinish();
+//                    }
+//                });
+//            }
+//        }, 300);
 
     }
 
