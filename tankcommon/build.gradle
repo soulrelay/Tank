@@ -36,7 +36,7 @@ dependencies {
 
     //图片加载库的封装 自己基于Glide进行的封装
     // https://github.com/soulrelay/ImageLoaderUtil
-    compile 'com.sus.library:imagelib:1.0.0'
+    compile 'com.sus.library:imagelib:1.0.1'
 
     //swipe display drawer with flowing & bouncing effects.
     //https://github.com/mxn21/FlowingDrawer
