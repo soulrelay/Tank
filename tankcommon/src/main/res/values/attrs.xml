@@ -6,4 +6,9 @@
         <attr name="rollDistance" format="integer" />
         <attr name="rollTime" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="Wave">
+        <attr name="color" format="color"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
 </resources>

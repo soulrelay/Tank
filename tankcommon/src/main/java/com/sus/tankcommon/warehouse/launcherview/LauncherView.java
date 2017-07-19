@@ -19,6 +19,9 @@ import android.widget.RelativeLayout;
 
 import com.sus.tankcommon.R;
 import com.sus.tankcommon.utils.CommonUtils;
+import com.sus.tankcommon.warehouse.wave.Wave;
+
+import static cn.hugeterry.coordinatortablayout.R.attr.logo;
 
 /**
  * Author:    Diamond_Lin
@@ -243,10 +246,11 @@ public class LauncherView extends RelativeLayout {
 
     private void showLogo() {
         View view = View.inflate(getContext(), R.layout.widget_load_view, this);
-        View logo = view.findViewById(R.id.iv_logo);
+        //View logo = view.findViewById(R.id.iv_logo);
+        Wave wave = (Wave) view.findViewById(R.id.wave);
         final View slogo = view.findViewById(R.id.iv_slogo);
-        ObjectAnimator alpha = ObjectAnimator.ofFloat(logo, View.ALPHA, 0f, 1f);
-        alpha.setDuration(800);
+        ObjectAnimator alpha = ObjectAnimator.ofFloat(wave, View.ALPHA, 0f, 1f);
+        alpha.setDuration(1000);
 
         alpha.start();
         new Handler().postDelayed(new Runnable() {
@@ -263,7 +267,7 @@ public class LauncherView extends RelativeLayout {
                     }
                 });
             }
-        }, 400);
+        }, 1000);
 
     }
 
